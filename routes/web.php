@@ -30,9 +30,9 @@ Route::get('/dashboard', function () {
 }); */
 
 Route::group(['middleware'=>['auth','admin']], function (){
-    Route::get('admin', [\App\Http\Controllers\AuthController::class, 'index']); //In this line check user
+    Route::get('adminpage', [\App\Http\Controllers\AuthController::class, 'index']); //In this line check user
 });
 
-// Route::get('admin', [\App\Http\Controllers\AuthController::class, 'index']); //In this line check user in controller though __cuntruct function
+// Route::get('adminpage', [\App\Http\Controllers\AuthController::class, 'index']); //In this line check user in controller though __cuntruct function
 
 require __DIR__.'/auth.php';
